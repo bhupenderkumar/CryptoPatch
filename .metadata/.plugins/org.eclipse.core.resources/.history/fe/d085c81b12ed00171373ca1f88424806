@@ -1,0 +1,12 @@
+package com.crypto.db;
+
+public interface IMongoConnection {
+
+	
+	String username="";
+	String password="";
+	String url ="localhost";
+	int port=27017;
+	
+	public boolean testConnection();
+}

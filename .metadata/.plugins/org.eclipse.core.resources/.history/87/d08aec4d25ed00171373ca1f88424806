@@ -1,0 +1,5 @@
+package com.crypto.config;
+
+public class MongoRepository {
+
+}

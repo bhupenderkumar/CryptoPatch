@@ -1,0 +1,1 @@
+INDEX VERSION 1.130+E:\Projects For Home_CRYPTO\.metadata\.plugins\org.eclipse.jdt.core
