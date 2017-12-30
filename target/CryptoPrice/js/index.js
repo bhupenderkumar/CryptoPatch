@@ -113,6 +113,7 @@ app
             }
             // addCrypto when used click on add button
             function addCrypto() {
+            	$scope.submitted=false;
                 $scope.form.$setPristine();
                 $scope.form.$setValidity();
                 $scope.form.$setValidity(false);
