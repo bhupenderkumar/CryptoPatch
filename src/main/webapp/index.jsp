@@ -28,7 +28,7 @@
 	<div ng-app="cryptoPrice">
 		<div ng-controller="priceCtrl">
 
-			<form name="form" ng-submit="form.$valid && addCrypto()">
+			<form name="form" ng-submit="submitted && form.$valid && addCrypto()" novalidate="novalidate">
 				<div class="loading" ng-if="crypto==undefined">Loading&#8230;</div>
 				<div ng-if="crypto!=undefined ">
 					<div class="col-lg-12">
