@@ -1,9 +1,0 @@
-package com.crypto.apiClasses;
-
-public class ResponseToUser {
-	
-	CryptoCompare compare;
-	UserData userData;
-	
-
-}
