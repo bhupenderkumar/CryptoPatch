@@ -1,0 +1,9 @@
+package com.crypto.apiClasses;
+
+public class CryptoCompare {
+
+	
+	String data;
+	
+	
+}

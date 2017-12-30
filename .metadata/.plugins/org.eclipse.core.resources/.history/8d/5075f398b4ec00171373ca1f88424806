@@ -1,0 +1,12 @@
+package com.crypto.db;
+
+public class Records {
+
+	public boolean insertrecord() {
+		
+		
+		
+		return true;
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.crypto.db;
+
+public class MongoConnection implements IMongoConnection {
+	
+	
+	public boolean testConnection() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

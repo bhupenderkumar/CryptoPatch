@@ -1,0 +1,10 @@
+package com.crypto.apiClasses;
+
+public class UserData {
+	
+	String cryptoCurrency;
+	double quantity;
+	String requestedCurr;
+	
+
+}
