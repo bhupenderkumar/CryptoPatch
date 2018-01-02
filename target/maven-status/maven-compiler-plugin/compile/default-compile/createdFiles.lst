@@ -1,0 +1,14 @@
+com\crypto\db\MongoConnection.class
+com\crypto\apiClasses\CoinMarketCap.class
+com\crypto\config\MongoConfig.class
+com\crypto\ws\CryptoTestWS.class
+com\crypto\db\IMongoConnection.class
+com\crypto\apiClasses\UserData.class
+com\crypto\apiClasses\CryptoCompare.class
+com\crypto\db\TestDB.class
+com\crypto\db\CryptoCurd.class
+com\crypto\apiClasses\ResponseToUser.class
+com\crypto\config\UserRepository.class
+com\crypto\db\Test.class
+com\crypto\db\TestDBConnection.class
+com\crypto\db\Records.class

@@ -1,11 +1,13 @@
 package com.crypto.db;
 
+import java.net.UnknownHostException;
+
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
 
 public class TestDB {
-	public boolean testDBConnection()
+	public boolean testDBConnection() throws UnknownHostException
 	{
 		MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
 
@@ -29,7 +31,7 @@ public class TestDB {
 	}
 	public static void main(String[] args) {
 		TestDB t= new TestDB();
-		t.testDBConnection();
+//		t.testDBConnection();
 		
 	}
 }

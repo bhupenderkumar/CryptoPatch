@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.UnknownHostException;
 
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
@@ -15,14 +16,14 @@ public class MongoConnection implements IMongoConnection {
 
 	public boolean testConnection() {
 		// TODO Auto-generated method stub
-		MongoClient mongoClient = new MongoClient();
-		DB db = mongoClient.getDB("crypto");
-		DBCollection school = db.getCollection("college");
-		System.out.println("Collection mycol created successfully");
+//		MongoClient mongoClient = new MongoClient();
+//		DB db = mongoClient.getDB("crypto");
+//		DBCollection school = db.getCollection("college");
+//		System.out.println("Collection mycol created successfully");
 		return true;
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws UnknownHostException {
 		String coiTecko = storeInDB("XRP","INR");
 		MongoClient mongoClient = new MongoClient(url,port);
 		DB db = mongoClient.getDB("crypto");
