@@ -21,7 +21,7 @@ public class MongoConnection implements IMongoConnection {
 //		DBCollection school = db.getCollection("college");
 //		System.out.println("Collection mycol created successfully");
 		return true;
-	}
+	}  
 
 	public static void main(String[] args) throws UnknownHostException {
 		String coiTecko = storeInDB("XRP","INR");
