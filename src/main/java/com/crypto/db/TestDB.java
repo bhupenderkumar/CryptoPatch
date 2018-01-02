@@ -13,7 +13,17 @@ public class TestDB {
         @SuppressWarnings("deprecation")
 		DB db = mongoClient.getDB( "crypto" );
         System.out.println("Connect to database successfully");
+
+        Records t=new Records();
+        t.setId(100);
+        t.setName("Ghorbani");
+        DBCollection collection = null ;
+        collection = db.getCollection("test");
+        collection.save(t);
+        System.err.println(collection.findOne());
+
         DBCollection school = db.getCollection("college");
+
         System.out.println("Collection mycol created successfully");
         return true;
 	}
