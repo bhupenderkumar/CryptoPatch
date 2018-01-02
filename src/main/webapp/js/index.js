@@ -13,6 +13,8 @@ app
                     $scope.existingCrypto = [];
                     alert("No Item Found in Your Local Storage");
                 }
+                $scope.form={};
+                $scope.form.submitted=false;
                 
                 $scope.userCrypto = {};
                 initializeTimeoutFunction();
@@ -115,13 +117,7 @@ app
             
             // addCrypto when used click on add button
             function addCrypto() {
-            	$scope.submitted=false;
-                $scope.form.$setPristine();
-                $scope.form.$setValidity();
-                $scope.form.$setValidity(false);
-                $scope.form.$setPristine();
-                $scope.form.$setUntouched();
-                $scope.form.$rollbackViewValue();
+            	$scope.form.submitted=false;
                 var crypto = angular.copy($scope.userCrypto);
                 console.log(crypto);
                 for (var i = 0; i < $scope.crypto.length; i++) {

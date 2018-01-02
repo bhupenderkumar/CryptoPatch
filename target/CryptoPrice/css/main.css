@@ -122,3 +122,28 @@ box-shadow: rgba(255,255,255, 0.75) 1.5em 0 0 0, rgba(255,255,255, 0.75) 1.1em 1
 .error{
 	color:red;
 }
+/* icon */ .custom-navbar .fa {font-size:25px}
+
+@media (max-width:767px) { 
+    .custom-navbar .navbar-right {
+        float: right;
+        padding-right: 15px;
+    }
+    .custom-navbar .nav.navbar-nav.navbar-right li {
+        float: right;
+    }
+    .custom-navbar .nav.navbar-nav.navbar-right li > a {
+        padding:8px 5px;
+    }
+    .custom-navbar .navbar-toggle {
+        float: left
+    }
+    .custom-navbar .navbar-header {
+        float: left;
+        width: auto!important;
+    }
+    .custom-navbar .navbar-collapse {
+        clear: both;
+        float: none;
+    }
+}

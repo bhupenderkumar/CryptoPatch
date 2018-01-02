@@ -22,13 +22,24 @@
 			</div>
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="#">Home</a></li>
+				<li class=""><a href="#">Articles</a></li>
 			</ul>
+			<!-- 			<ul class="nav navbar-nav"> -->
+			<!-- 				<li class="active"><a href="#">Sign In</a></li> -->
+			<!-- 				<li class="active"><a href="#">Sign Up</a></li> -->
+			<!-- 			</ul> -->
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#" class="fa fa-cog">Sign In</a></li>
+				<li><a href="#" class="fa fa-home">Sign Up</a></li>
+			</ul>
+
+
 		</div>
 	</nav>
 	<div ng-app="cryptoPrice">
 		<div ng-controller="priceCtrl">
 
-			<form name="form" ng-submit="submitted && form.$valid && addCrypto()"
+			<form name="form" ng-submit="form.$valid && addCrypto()"
 				novalidate="novalidate" novalidate>
 				<div class="loading" ng-if="crypto==undefined">Loading&#8230;</div>
 				<div ng-if="crypto!=undefined ">
@@ -47,7 +58,7 @@
 										selected>Select your Currency</option>
 								</select>
 								<div class="error"
-									ng-show="submitted && form.cryptoCurrency.$invalid">Please
+									ng-show="form.submitted && form.cryptoCurrency.$invalid">Please
 									select your required currency first.</div>
 							</div>
 						</div>
@@ -57,7 +68,8 @@
 								<input type="text" class="form-control" name="quantity"
 									placeholder="Quantity(Ex:0.3)" ng-model="userCrypto.quantity"
 									ng-required="true" required>
-								<div class="error" ng-show="submitted && form.quantity.$invalid">Please
+								<div class="error"
+									ng-show="form.submitted && form.quantity.$invalid">Please
 									enter the quantity of currency (ex:0.01)</div>
 							</div>
 
@@ -73,15 +85,17 @@
 									<option ng-repeat="(key,val) in currencies" value="{{val}}"
 										selected="selected">{{val}}-{{key}}</option>
 								</select>
-								<div class="error" ng-show="submitted && form.curr.$invalid">Please
+								<div class="error"
+									ng-show="form.submitted && form.curr.$invalid">Please
 									select currency</div>
 							</div>
 						</div>
 						<div class="col-lg-12">
 							<div class="col-lg-7"></div>
 							<div class="col-lg-3">
-								<input class="btn btn-primary" type="button" value="Add"
-									title="click to save this" ng-click="submitted=true" />
+								<input class="btn btn-primary" type="submit" value="Add"
+									title="click to save this"
+									ng-click="form.submitted=true;alert()" />
 							</div>
 						</div>
 
@@ -97,18 +111,19 @@
 									<th>Current Price</th>
 									<th>Your Currency Price</th>
 									<th>Previous Checked Price</th>
+									<th>Graph View</th>
 									<th>Remove This</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr ng-repeat="obj in existingCrypto">
-
 									<td>{{obj.crypto.name}}</td>
 									<td>{{obj.quantity}}</td>
 									<td>{{obj.currency}}</td>
-									<td>{{obj.yourPrice}}</td>
+									<td>{{obj.yourPrice}}$</td>
 									<td>{{obj.yourCurrPrice}}</td>
 									<td>{{obj.prevCheckedPrice}}</td>
+									<td>There Graph</td>
 									<td title="Delete This Crypto" ng-click="removeThis($index)"
 										style="color: blue; mouse: hand;"><span>Delete</span></td>
 								</tr>
@@ -120,7 +135,10 @@
 					<!-- 				{{obj.crypto.name}}-{{obj.quantity}}-{{obj.currency}} - -->
 					<!-- 				{{obj.yourPrice}}</div> -->
 				</div>
+			</form>
+
 		</div>
+
 
 	</div>
 </body>
