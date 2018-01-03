@@ -147,3 +147,19 @@ box-shadow: rgba(255,255,255, 0.75) 1.5em 0 0 0, rgba(255,255,255, 0.75) 1.1em 1
         float: none;
     }
 }
+.error {
+  margin:10px 0 20px 0;
+  padding:10px;
+  border:1px solid rgba(0,0,0,0.2);
+  background:#f00;
+  color:#fff;
+  border-radius:4px;
+
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.error.ng-hide {
+  opacity:0;
+  /* transform: scale(0.8); */
+}
