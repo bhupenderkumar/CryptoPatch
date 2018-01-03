@@ -18,8 +18,5 @@ public class WebAppInitializer implements WebApplicationInitializer {
 		dynamic.addMapping("/");
 		dynamic.setLoadOnStartup(1);
 	}
-	
-	public void addResourceHandlers(final ResourceHandlerRegistry registry) {
-	    registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
-	}
+	 
 }
