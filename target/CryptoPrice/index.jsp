@@ -10,6 +10,7 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </head>
+
 <script src="js/angular.min.js"></script>
 <script type="text/javascript" src="js/ngStorage.min.js"></script>
 <script src="js/index.js"></script>
