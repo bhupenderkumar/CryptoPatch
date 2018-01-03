@@ -17,25 +17,29 @@
 
 <body>
 
+
 	<nav class="navbar navbar-inverse">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Crypto Price Checker</a>
-			</div>
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header container-fluid">
+			<button type="button" data-target="#navbarCollapse"
+				data-toggle="collapse" class="navbar-toggle">
+				<span class="sr-only">Crypto Navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand">Crypto Currency Price Checker</a>
+		</div>
+		<!-- Collection of nav links and other content for toggling -->
+		<div id="navbarCollapse" class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="#">Home</a></li>
-				<li class=""><a href="#">Articles</a></li>
+				<li><a href="#">Articles</a></li>
+				<!-- 				<li><a href="#">Messages</a></li> -->
 			</ul>
-			<!-- 			<ul class="nav navbar-nav"> -->
-			<!-- 				<li class="active"><a href="#">Sign In</a></li> -->
-			<!-- 				<li class="active"><a href="#">Sign Up</a></li> -->
-			<!-- 			</ul> -->
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#" class="fa fa-cog">Sign In</a></li>
-				<li><a href="#" class="fa fa-home">Sign Up</a></li>
+				<li><a href="#">Sign In</a></li>
+				<li><a href="#">Sign Up</a></li>
 			</ul>
-
-
 		</div>
 	</nav>
 	<div ng-app="cryptoPrice">
