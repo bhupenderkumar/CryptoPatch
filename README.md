@@ -1,7 +1,10 @@
 "# CryptoPatch" 
 
 index js file
-
+ Username: user3HW
+       Password: fwUPgXKrVi23aH5o
+  Database Name: sampledb
+ Connection URL: mongodb://user3HW:fwUPgXKrVi23aH5o@mongodb/sampledb
 
 var app = angular.module('cryptoPrice', [ "ngStorage" ]);
 app

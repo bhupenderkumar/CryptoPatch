@@ -81,6 +81,9 @@ public class CoinMarketCap {
 	public void setPercent_change_1h(String percent_change_1h) {
 		this.percent_change_1h = percent_change_1h;
 	}
+	public String getCoinMarketCap(){
+		return "[{\"id\": \"bitcoin\",\"symbol\": \"BTC\"}]";
+	}
 	public String getPercent_change_24h() {
 		return percent_change_24h;
 	}

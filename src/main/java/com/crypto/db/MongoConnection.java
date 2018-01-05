@@ -7,10 +7,15 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.UnknownHostException;
+import java.util.Arrays;
+
+import javax.servlet.ServletException;
 
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
+import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
+import com.mongodb.ServerAddress;
 
 public class MongoConnection implements IMongoConnection {
 
@@ -23,18 +28,27 @@ public class MongoConnection implements IMongoConnection {
 		return true;
 	}  
 
-	public static void main(String[] args) throws UnknownHostException {
-		String coiTecko = storeInDB("XRP","INR");
-		MongoClient mongoClient = new MongoClient(url,port);
-		DB db = mongoClient.getDB("crypto");
-		System.out.println("Connect to database successfully");
-		Records t = new Records();
-		t.setId(10011);
-		t.setName(coiTecko);
-		DBCollection collection = null;
-		collection = db.getCollection("test");
-		collection.save(t);
-		System.err.println(collection.findOne(10011));
+	public static void main(String[] args) throws UnknownHostException, ServletException {
+		Mongo mongo;
+		DB mongoDB;
+		String host = System.getenv("OPENSHIFT_MONGODB_DB_HOST");
+		String sport = System.getenv("OPENSHIFT_MONGODB_DB_PORT");
+		String db = System.getenv("OPENSHIFT_APP_NAME");
+		if (db == null)
+			db = "mydb";
+		String user = System.getenv("OPENSHIFT_MONGODB_DB_USERNAME");
+		String password = System.getenv("OPENSHIFT_MONGODB_DB_PASSWORD");
+		int port = Integer.decode(sport);
+
+		try {
+			mongo = new Mongo(host, port);
+		} catch (UnknownHostException e) {
+			throw new ServletException("Failed to access Mongo server", e);
+		}
+		mongoDB = mongo.getDB(db);
+		if (mongoDB.authenticate(user, password.toCharArray()) == false) {
+			throw new ServletException("Failed to authenticate against db: " + db);
+		}
 	}
 
 	public static String storeInDB(String fsym,String tsyms) {
