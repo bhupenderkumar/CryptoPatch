@@ -9,6 +9,14 @@ app.config([ '$stateProvider', '$urlRouterProvider',
 				url : "/articles",
 				controller:"articlesCtrl",
 				templateUrl : "view/articles.html"
+			}).state('signIn', {
+				url : "/signIn",
+				controller:"signInCtrl",
+				templateUrl : "view/signIn.html"
+			}).state('signUp', {
+				url : "/signUp",
+				controller:"signUpCtrl",
+				templateUrl : "view/signUp.html"
 			})
 
 		} ]);

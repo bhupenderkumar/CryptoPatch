@@ -27,7 +27,18 @@ app
 						$scope.refresh = refresh;
 						$scope.calculateTotalPrice = calculateTotalPrice;
 						$scope.reloadPage = reloadPage;
+						$scope.getPriceForOne = getPriceForOne;
 
+					}
+					/**
+					 * 
+					 * @param obj
+					 * @returns
+					 */
+					function getPriceForOne(obj) {
+//						alert(obj);
+						console.log(obj.crypto.price_usd);
+						alert(obj.crypto.price_usd);
 					}
 					/**
 					 * function used to reload the page
